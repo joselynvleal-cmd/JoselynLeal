@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiCRM - Registro de Clientes</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <main class="registro-container">
+        <section class="registro-card">
+
+            <!-- Encabezado con el título y la instrucción principal -->
+            <header>
+                <h1>Registro de Clientes</h1>
+                <p>Complete la información solicitada</p>
+            </header>
+
+            <!-- FORMULARIO -->
+            <form action="#" method="POST">
+                <div class="form-grid">
+                    <div class="form-group">
+
+                        <!-- Campo 1: Para escribir el Nombre -->
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre" required placeholder="Ej. Pedro Perez">
+                    </div>
+
+                    <!-- Campo 2: Para la Cédula (con límite de números) -->
+                    <div class="form-group">
+                        <label for="cedula">Cédula de Identidad</label>
+                        <input type="text" id="cedula" name="cedula" required minlength="8" maxlength="10" placeholder="Ej. 12345678 (8-10 dígitos)">
+                    </div>
+
+                    <!-- Campo 3: Para el Correo -->
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" required placeholder="cliente@gmail.com">
+                    </div>
+
+                    <!-- Campo 4: Para el Teléfono -->
+                    <div class="form-group">
+                        <label for="telefono">Número Telefónico</label>
+                        <input type="tel" id="telefono" name="telefono" required maxlength="11" placeholder="Ej. 04121234567 (11 dígitos)">
+                    </div>
+
+                    <!-- Campo 5: Botones para elegir el tipo de cliente -->
+                    <div class="form-group radio-group">
+                        <label class="main-label">Tipo de Cliente</label>
+                        <div class="radio-options">
+                            <label for="natural">
+                                <input type="radio" id="natural" name="tipo_cliente" value="natural" checked> Natural
+                            </label>
+                            <label for="juridico">
+                                <input type="radio" id="juridico" name="tipo_cliente" value="juridico"> Jurídico
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Campo 6: Lista desplegable para elegir el área de trabajo -->
+                    <div class="form-group">
+                        <label for="sector">Sector / Industria</label>
+                        <select name="sector" id="sector" required>
+                            <option value="" disabled selected>-- Seleccionar Sector --</option>
+                            <option value="Tecnología">Tecnología e Informática</option>
+                            <option value="Comercio">Comercio y Servicios</option>
+                            <option value="Salud">Salud y Farmacia</option>
+                            <option value="Educación">Educación y Capacitación</option>
+                        </select>
+                    </div>
+
+                    <!-- Campo 7: Dirección -->
+                    <div class="form-group full-width">
+                        <label for="direccion">Dirección Habitación / Fiscal (Opcional)</label>
+                        <input type="text" id="direccion" name="direccion" placeholder="Ingrese la dirección detallada...">
+                    </div>
+                </div>
+
+                <!-- Botón principal para guardar los datos -->
+                <button type="submit" class="btn-primary">Registrar Cliente</button>
+            </form>
+
+            <!-- Enlace para ir a la página de inicio de sesión -->
+            <div class="links-footer">
+                <a href="login_joselynleal.html">¿Ya tienes cuenta? Inicia sesión aquí</a>
+            </div>
+
+            <!-- Pie de página con los datos de la universidad y la materia -->
+            <footer>
+                <p>© 2026 Instituto Universitario Jesús Obrero (IUJO) - Extensión Barquisimeto.</p>
+                <p>Unidad Curricular: Algorítmica y Programación II | Profesor: Ing. José Cadenas</p>
+            </footer>
+        </section>
+    </main>
+</body>
+</html>
